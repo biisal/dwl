@@ -14,9 +14,8 @@ static const float focuscolor[] = COLOR(0x7094c0cc);
 static const float urgentcolor[] = COLOR(0xb36174ff);
 
 /* Autostart */
-
-static const char *const autostart[] = {
-    "sh", "-c", "/home/avisek/dwl-setup/autostart.sh", NULL};
+static const char *const autostart[] = {"sh", "-c",
+                                        "~/.config/dwl/autostart.sh", NULL};
 
 /* This conforms to the xdg-protocol. Set the alpha to zero to restore the old
  * behavior */
@@ -153,7 +152,6 @@ static const char *menucmd[] = {"rofi",        "-show",         "drun",
 static const Key keys[] = {
     /* Note that Shift changes certain key codes: c -> C, 2 -> at, etc. */
     /* modifier                  key                 function        argument */
-    {MODKEY, XKB_KEY_c, spawn, SHCMD("~/.config/mango/scripts/clipboard.sh")},
     {MODKEY, XKB_KEY_space, spawn, {.v = menucmd}},
     {MODKEY | WLR_MODIFIER_SHIFT, XKB_KEY_Return, spawn, {.v = termcmd}},
     {MODKEY, XKB_KEY_j, focusstack, {.i = +1}},
