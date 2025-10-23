@@ -12,6 +12,7 @@ static const float rootcolor[] = COLOR(0x121317ff);
 static const float bordercolor[] = COLOR(0x1a1a22ff);
 static const float focuscolor[] = COLOR(0x7094c0cc);
 static const float urgentcolor[] = COLOR(0xb36174ff);
+
 /* This conforms to the xdg-protocol. Set the alpha to zero to restore the old
  * behavior */
 static const float fullscreen_bg[] = {0.0f, 0.0f, 0.0f,
